@@ -6,7 +6,7 @@ provider "google" {
 }
 
 resource "google_compute_network" "main" {
-  name                    = "LandingZon"
+  name                    = "main"
   auto_create_subnetworks = false
 }
 
