@@ -1,6 +1,6 @@
 provider "google" {
    #credentials = "${file("service.json")}"
-   project= "forward-lead-376404"
+   project= "443269190583@cloudbuild.gserviceaccount.com"
    region  = "us-central1"
    zone    = "us-central1-c"
 }
@@ -58,7 +58,7 @@ resource "google_compute_router_nat" "nat" {
   source  = "terraform-google-modules/network/google"
   version = "~> 6.0"
 
-  project_id   = local.project
+  project_id   = "443269190583@cloudbuild.gserviceaccount.com"
   network_name = "main"
   routing_mode = "REGIONAL"
 
