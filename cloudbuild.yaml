@@ -7,4 +7,4 @@ steps:
     args: ["-c","terraform plan"]
   - name: 'hashicorp/terraform:1.0.0'
     entrypoint: sh
-    args: ["-c","terraform apply --auto-approve"]
+    args: ["-c","terraform destroy --auto-approve"]
