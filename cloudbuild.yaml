@@ -1,12 +1,12 @@
 steps:
 options:
   logging: CLOUD_LOGGING_ONLY
-  - name: 'hashicorp/terraform:1.0.0'
-    entrypoint: sh
-    args: ["-c","terraform init"]
-  - name: 'hashicorp/terraform:1.0.0'
-    entrypoint: sh
-    args: ["-c","terraform plan"]
-  - name: 'hashicorp/terraform:1.0.0'
-    entrypoint: sh
-    args: ["-c","terraform destroy --auto-approve"]
+- name: 'hashicorp/terraform:1.0.0'
+  entrypoint: sh
+  args: ["-c","terraform init"]
+- name: 'hashicorp/terraform:1.0.0'
+  entrypoint: sh
+  args: ["-c","terraform plan"]
+- name: 'hashicorp/terraform:1.0.0'
+  entrypoint: sh
+  args: ["-c","terraform destroy --auto-approve"]
