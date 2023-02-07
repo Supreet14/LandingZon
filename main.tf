@@ -1,5 +1,4 @@
 provider "google" {
-  credentials = "${file("service.json")}"
    project= "forward-lead-376404"
    region  = "us-central1"
    zone    = "us-central1-c"
