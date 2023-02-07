@@ -1,5 +1,5 @@
 provider "google" {
-   #credentials = "${file("service.json")}"
+  credentials = "${file("service.json")}"
    project= "forward-lead-376404"
    region  = "us-central1"
    zone    = "us-central1-c"
@@ -27,6 +27,7 @@ resource "google_compute_subnetwork" "private" {
   region        = "us-central1"
   network       = google_compute_network.main.id
 }
+/*
 resource "google_compute_router" "router" {
   name    = "router"
   network = google_compute_network.main.id
@@ -50,7 +51,7 @@ resource "google_compute_router_nat" "nat" {
     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
   }
 }
-
+*/
 
 
 
@@ -58,7 +59,7 @@ resource "google_compute_router_nat" "nat" {
   source  = "terraform-google-modules/network/google"
   version = "~> 6.0"
 
-  project_id   = "forward-lead-376404"
+  project_id   = local.project
   network_name = "main"
   routing_mode = "REGIONAL"
 
