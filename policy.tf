@@ -1,17 +1,8 @@
-data "google_iam_policy" "admin" {
-  binding {
-    role = "roles/compute.instanceAdmin"
+resource "google_project_iam_binding" "project" {
+  project = "forward-lead-376404"
+  role    = "roles/editor"
 
-    members = [
-      "443269190583@cloudbuild.gserviceaccount.com",
-    ]
-  }
-
-  binding {
-    role = "roles/storage.objectViewer"
-
-    members = [
-      "443269190583@cloudbuild.gserviceaccount.com",
-    ]
-  }
+  members = [
+    "serviceAccount:443269190583@cloudbuild.gserviceaccount.com",
+  ]
 }
