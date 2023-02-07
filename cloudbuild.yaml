@@ -10,4 +10,4 @@ steps:
   args: ["-c","terraform refresh"]
 - name: 'hashicorp/terraform:1.0.0'
   entrypoint: sh
-  args: ["-c","terraform apply -replace="google_compute_network.main""]
+  args: ["-c","terraform apply -replace="google_compute_network.main" --auto-approve"]
